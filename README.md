@@ -11,14 +11,15 @@
 
 
 
- Intermediate vs Terminal Operations
+ # Intermediate vs Terminal Operations
+
 Intermediate operations (e.g., map(), filter(), sorted()) return a new stream. They're lazy, meaning they don't execute until a terminal operation is called.
 
 Terminal operations (e.g., collect(), forEach(), count()) trigger the stream pipeline and produce a result or side-effect.
 
 📂 File: StreamBasics.java
 
- map(), filter(), flatMap()
+# map(), filter(), flatMap()
 map() — transforms each element (e.g., String to uppercase).
 
 filter() — removes elements based on a condition (e.g., keep only even numbers).
@@ -27,16 +28,17 @@ flatMap() — flattens nested structures like List<List<String>> into a single s
 
 📂 File: MapFlatMapExample.java
 
-collect(), groupingBy(), partitioningBy()
-collect() — terminal operation used to convert stream to List, Set, Map, etc.
+# In Java 8 and up, there are several collectors that make working with the Stream API more efficient, such as collect(), groupingBy(), and partitioningBy().  Here's how each one works:
 
-groupingBy() — groups elements by a classifier function (e.g., group employees by department).
+collect(): A terminal operation that converts a stream into a List, Set, Map, etc.
 
-partitioningBy() — splits data into two groups based on a predicate (e.g., true/false).
+groupingBy(): Groups elements based on a classifier function (for instance, employees grouped by department).
 
-📂 File: GroupingAndPartitioning.java
+partitioningBy(): Splits data into two groups based on a predicate (such as True/False).
 
- IntSummaryStatistics
+📂 GroupingAndPartitioning.java.
+
+# IntSummaryStatistics
 Java 8 provides built-in summary collectors like summarizingInt(), summarizingDouble(), etc.
 
 These return IntSummaryStatistics or DoubleSummaryStatistics containing:
@@ -45,7 +47,7 @@ count, sum, min, max, average
 
 📂 File: SummaryStatisticsExample.java
 
-Fail-Fast vs Fail-Safe
+# Fail-Fast vs Fail-Safe
 Fail-Fast (e.g., ArrayList, HashMap) throws ConcurrentModificationException if modified during iteration.
 
 Fail-Safe (e.g., CopyOnWriteArrayList, ConcurrentHashMap) avoids exceptions by working on a copy of the data.
