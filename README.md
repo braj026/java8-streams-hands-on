@@ -1,2 +1,10 @@
-# java8-streams-hands-on
-Hands-on examples for Java 8 Stream API — includes map, filter, flatMap, collect, groupingBy, summary statistics, custom collectors and parallel streams.
+## 📘 Topics Covered
+
+| Topic | Description |
+|-------|-------------|
+| ✅ Intermediate vs Terminal Operations | Learn the stream processing lifecycle |
+| ✅ map(), filter(), flatMap() | Functional-style transformations |
+| ✅ collect(), groupingBy(), partitioningBy() | Aggregation and data organization |
+| ✅ IntSummaryStatistics | Get count, sum, average, min, and max |
+| ✅ Parallel Streams | When and when *not* to use them |
+| ✅ Fail-Fast vs Fail-Safe | Understand modification behavior during iteration |
